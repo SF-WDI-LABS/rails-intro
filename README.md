@@ -186,5 +186,5 @@ Wooo, nice!
 * Create an array of your favorite languages in your controller. Pass them into your view and put each of them inside its own `<li>` tag. (example: `<li> <%=@languages[0]%> </li>`)
 * Now instead of accessing each element by index, loop over your languages array and display each language.
 
-##Resources
+## Resources
 [More reading](further-reading.md)
