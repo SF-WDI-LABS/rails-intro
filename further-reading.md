@@ -1,33 +1,33 @@
-#What is Rails?
+# What is Rails?
 
 Rails was created in 2003 by David Heinemeier Hansson, while working on the code base for Basecamp, a project management tool by 37signals. David extracted Ruby on Rails and officially released it as open source code in July of 2004.
 
 Rails was created with the goal of increasing programmers' happiness and productivity levels. In short, with Rails you can get started with a full-stack web application by quickly creating pages, templates and even query functions. Even though Rails comes with its own set of tools and settings, you're certainly not limited to library of rails commands and configurations. Developers are free to configure their applications however they wish, though adopting conventions is certainly recommended.
 
-##[Understanding Rails Guiding Principles](http://railsapps.github.io/what-is-ruby-rails.html)
+## [Understanding Rails Guiding Principles](http://railsapps.github.io/what-is-ruby-rails.html)
 The popularity of Rails is an outgrowth of the Rails “philosophy” or guiding principles.
 
-####Rails is Opinionated
+#### Rails is Opinionated
 In the mid-1990s, web applications were often written in Perl, a programming language that promised, “There’s more than one way to do it.” Perl is a prime example of “non-opinionated” software; there’s no “right way” or “best way” to solve programming problems in Perl. Famously, Perl’s documentation states, “In general, [Perl’s built-in functions] do what you want, unless you want consistency.”
 
 In contrast, Rails is said to be “opinionated.” There is a “Rails way” for many of the problems that must be solved by a web application developer. If you follow the Rails conventions, you’ll have fewer decisions to make and you’ll find more of what you need is already built. The benefit is faster development, improved collaboration, and easier maintenance.
 
-####Rails is Omakase
+#### Rails is Omakase
 Omakase is a Japanese phrase that means “I’ll leave it to you.” Customers at sushi restaurants can order omakase, entrusting the chef to make a pleasing selection instead of making their own à la carte choices. In a famous essay Heinemeier Hansson declared Rails is Omakase, and said, “A team of chefs picked out the ingredients, designed the APIs, and arranged the order of consumption on your behalf according to their idea of what would make for a tasty full-stack framework…. When we, or in some cases I — as the head chef of the omakase experience that is Rails — decide to include a dish, it’s usually based on our distilled tastes and preferences. I’ve worked in this establishment for a decade. I’ve poured well in the excess of ten thousand hours into Rails. This doesn’t make my tastes right for you, but it certainly means that they’re well formed.”
 
 Understanding that Rails is omakase means accepting that many of the opinions enshrined in the Rails API are the decisions of a Benevolent Dictator for Life, informed by discussion with other developers who have made significant contributions to the Rails code base. For the most part, Heinemeier Hansson’s “opinions” will serve you well.
 
-####Convention Over Configuration
+#### Convention Over Configuration
 “Convention over configuration” is an example of Rails as “opinionated software.” It is an extension of the concept of a default, a setting or value automatically assigned without user intervention. Some software systems, notably Java web application frameworks, need multiple configuration files, each with many settings. For example, a configuration file might specify that a database table named “sales” corresponds to a class named “Sales.” The configuration file permits flexibility (a developer can easily change the setting if the table is named “items_sold”). Instead of relying on extensive configuration files, Rails makes assumptions. By convention, if you create a model object in Rails named “User,” it will save data to a database table named “users” without any configuration required. Rails will also assume the table name is plural if the class name is singular.
 
 “Convention over configuration” means you’ll be productive. You won’t spend time setting up configuration files. You’ll spend less time thinking about where things go and what names to assign. And, because other developers have learned the same conventions, it is easier to collaborate.
 
-####Don’t Repeat Yourself
+#### Don’t Repeat Yourself
 Known by the acronym DRY, “Don’t Repeat Yourself” is a principle of software development formulated by Andy Hunt and Dave Thomas and widely advocated among Rails developers. In its simplest form, it is an admonition to avoid duplication. When code is duplicated, an application becomes more complex, making it more difficult to maintain and more vulnerable to unintended behavior (bugs). The DRY principle can be extended to development processes as well as code. For example, manual testing is repetititive; automated testing is DRY. Software design patterns that introduce abstraction or indirection can make code more DRY; for example, by eliminating repetitive if-then logic.
 
 Code reuse is a fundamental technique in software development. It existed long before Andy Hunt and Dave Thomas promoted the DRY principle. Rails takes advantage of Ruby’s metaprogramming features to not just reuse code but eliminate code where possible. With a knowledge of Rails conventions, it’s possible to create entire simple web applications with only a few lines of code.
 
-##[The MVC Architecture](http://guides.rubyonrails.org/v3.2.21/getting_started.html#the-mvc-architecture)
+## [The MVC Architecture](http://guides.rubyonrails.org/v3.2.21/getting_started.html#the-mvc-architecture)
 At the core of Rails is the Model, View, Controller architecture, usually just called MVC. MVC benefits include:
 
 * Isolation of business logic from the user interface
@@ -39,13 +39,13 @@ At the core of Rails is the Model, View, Controller architecture, usually just c
 #### Models
 A model represents the information (data) of the application and the rules to manipulate that data. In the case of Rails, models are primarily used for managing the rules of interaction with a corresponding database table. In most cases, each table in your database will correspond to one model in your application. The bulk of your application’s business logic will be concentrated in the models.
 
-####Views
+#### Views
 Views represent the user interface of your application. In Rails, views are often HTML files with embedded Ruby code that perform tasks related solely to the presentation of the data. Views handle the job of providing data to the web browser or other tool that is used to make requests from your application.
 
-####Controllers
+#### Controllers
 Controllers provide the “glue” between models and views. In Rails, controllers are responsible for processing the incoming requests from the web browser, interrogating the models for data, and passing that data on to the views for presentation.
 
-##[File Structure of a Rails App](http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm)
+## [File Structure of a Rails App](http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm)
 
 ```
 /app
