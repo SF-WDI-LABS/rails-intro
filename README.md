@@ -1,5 +1,5 @@
 <!--
-Creator: Team editing by Cory
+Creator: Team, most recent editing by Cory
 Market: SF
 -->
 
@@ -80,11 +80,11 @@ Bundler looks at the `Gemfile` and downloads all of the listed gems in addition 
 - This will start a server on `localhost:3000` head there and see what it says!
 - Look through the file structure and consider the following questions:
 
-1. Where is the html for the page that you saw?
 1. What does the Gemfile remind you of from our full stack JS work?
 1. What might this strange looking `erb` stuff be?
 1. Where would be a logical place for database related information?
 1. Where would be a logical place for the testing files to live?
+1. Where is the html for the page that you saw?
 
 ## Rails File Structure
 
