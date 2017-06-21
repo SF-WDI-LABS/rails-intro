@@ -1,11 +1,33 @@
-## Intro to Rails
+<!--
+Creator: Team, most recent editing by Cory
+Market: SF
+-->
 
-| Objectives |
-| :--- |
-| *Students will be able to:* |
-| Articulate the Rails philosophy and the MVC pattern. |
-| Start a Rails project with no database and create routes that render dynamic templates. |
-| Distinguish between Express and Rails. |
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# Intro to Rails
+
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
+
+Ruby on Rails is one of the most commonly used libraries for building web applications. Basecamp, GitHub, Shopify, Airbnb, Twitch, SoundCloud, Hulu, Zendesk, and Square are all built with Ruby on Rails!
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+- Articulate the Rails philosophy and the MVC pattern.
+- Start a Rails project with no database and create routes that render dynamic templates.
+- Distinguish between Express and Rails and identify their common pieces.
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+- Comfortable writing Ruby and using the associated tools
+- Use rspec to run tests on Ruby code
+- Build a full stack JavaScript application
 
 ## Philosophy
 
@@ -22,13 +44,15 @@ Rails values...
 
 Rails uses an __MVC__ architecture
 
-<b>M</b>odel - The model refers to the data objects that we use. It's the object oriented approach to design. The data in our database will be the most common type of object that we'll put there.
+<b>M</b>odel - The model refers to the data objects that we use. It's the object oriented approach to design. The data in our database will hold the objects that are the foundation of our application - the ones that are used throughout the application, that are CRUDed, and need to persist in memory.
 
-<b>V</b>iew - The view is the Presentation layer. It's what the user sees and interacts with, essentially the web pages. The HTML, the CSS and the JavaScript. The controller processes and responds to user events, such as clicking on links and submitting forms.
+<b>V</b>iew - The view is the Presentation layer. It's what the user sees and interacts with - the web pages. The HTML, the CSS and the JavaScript that creates interactivity. The controller processes and responds to user events, such as clicking on links and submitting forms.
 
 <b>C</b>ontroller - The controller will make decisions based on the request and then control what happens in response. It controls the interaction with our models and with our views.
 
 ![MVC Diagram](http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png)
+
+![MVC Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
 
 ## Railstaurant Metaphor
 The **client** is a customer eating in the restaurant, **rails** is the kitchen, the **request** is the food ordered, the **router** is the waiter, the **controller** is a chef, the **model** is a recipe, the **database** is the giant walk-in refrigerator with ingredients, the **view** is plating the dish to look pretty, the **response** with a file is a waiter finally serving the dish to the customer.
@@ -39,7 +63,7 @@ The **client** is a customer eating in the restaurant, **rails** is the kitchen,
 
 `rails new NAME_OF_APP`
 
-This will launch a series of exciting events! Rails will construct a project in a directory with the project name that you just gave it. That project will include a standard set of folders and files that every Rails project has. At the end of process, Rails runs `bundle install`. That means Rails has is telling bundler to install all of the gems it will need to run the project.
+This will launch a series of exciting events! Rails will construct a project in a directory with the project name that you just gave it. That project will include a standard set of folders and files that every Rails project has. At the end of process, Rails runs `bundle install`. That means Rails is telling bundler to install all of the gems it will need to run the project.
 
 ## Bundler and Gems
 Bundler is like NPM. Gems are like node packages from NPM. Any gem you want to use in your project must be listed in your Gemfile (which is like the `package.json` file that NPM used). You have to run `bundle install` anytime you change your Gemfile. Your rails server needs to be restarted after any changes to your Gemfile.
@@ -52,9 +76,15 @@ Bundler looks at the `Gemfile` and downloads all of the listed gems in addition 
 - Create a new rails app with `rails new rails-fun --skip-activerecord`
     - the last flag tells the application not use activerecord
     - activerecord is our ORM that manages our Models and our database, we'll learn more about that later
-- `cd` into your `rails-fun` folder and run
-- run `rails server` or just `rails s` and see what happens
-- This will start a server on `localhost:3000` head there and see what it says...
+- `cd` into your `rails-fun` folder and run `rails server` or just `rails s` and see what happens
+- This will start a server on `localhost:3000` head there and see what it says!
+- Look through the file structure and consider the following questions:
+
+1. What does the Gemfile remind you of from our full stack JS work?
+1. What might this strange looking `erb` stuff be?
+1. Where would be a logical place for database related information?
+1. Where would be a logical place for the testing files to live?
+1. Where is the html for the page that you saw?
 
 ## Rails File Structure
 
@@ -97,7 +127,7 @@ Wow, another error! `*Missing template welcome/index...*` Since we have a `welco
 `app/views/welcome/index.html.erb`
 
 ```html
-<h1>I make internets with Rails</h1>
+<h1>I build with Rails</h1>
 <img src="http://i.giphy.com/SPZFhfUJjsJO0.gif" alt="learning internet" style="width: 300px">
 ```
 Check out your root route one more time.
@@ -127,7 +157,7 @@ Create a new template with whatever name you like and get it to render on the pa
 Let's say we want to pass a random number to our view from 0-100... Try adding this to your html:
 
 ```html
-<h1>I make internets with Rails</h1>
+<h1>I build with Rails</h1>
 <p>Random number is... <%= Random.new.rand(100) %></p>
 <img src="http://i.giphy.com/SPZFhfUJjsJO0.gif" alt="learning internet" style="width: 300px">
 ```
