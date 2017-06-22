@@ -18,7 +18,7 @@ Ruby on Rails is one of the most commonly used libraries for building web applic
 *After this workshop, developers will be able to:*
 
 - Articulate the Rails philosophy and the MVC pattern.
-- Start a Rails project with no database and create routes that render dynamic templates.
+- Start a Rails project with no database and create routes that render templates on the server side.
 - Distinguish between Express and Rails and identify their common pieces.
 
 ### Where should we be now?
