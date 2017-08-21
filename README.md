@@ -94,7 +94,7 @@ Bundler looks at the `Gemfile` and downloads all of the listed gems in addition 
 
 ## Routing
 
-Just like we saw in Angular, our project will need to know what actions to take based on which routes a user visits.
+Just like we saw in React, our project will need to know what actions to take based on which routes a user visits.
 
 - In `config/routes.rb` we write logic to map our paths to controllers we will make.
 - Let's say when a user sends a `GET` request to the root route, `/`, we want the `welcome` controller's `index` method to run. In order to do that we could write:
