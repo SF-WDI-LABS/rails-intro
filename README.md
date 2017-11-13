@@ -164,7 +164,7 @@ Let's say we want to pass a random number to our view from 0-100... Try adding t
 <img src="http://i.giphy.com/SPZFhfUJjsJO0.gif" alt="learning internet" style="width: 300px">
 ```
 
-What's happening here? Ruby is being evaluated first and the result is printed into our html. The `<% %>` symbols escape our html. These act a lot like the `{{}}` handlebars that we used to evaluate JavaScript in our HTML when we were using Angular or Handlebars.
+What's happening here? Ruby is being evaluated first and the result is printed into our html. The `<% %>` symbols escape our html. These act a lot like the `<% %>` handlebars that we used to evaluate JavaScript in our HTML when we were using EJS or `{}` with React inside the JSX Components.
 
 One additional complication that's different from `{{}}`: There are many varieties of `<% %>`.
 
